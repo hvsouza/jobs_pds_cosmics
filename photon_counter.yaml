@@ -1,0 +1,30 @@
+---
+path:
+
+  -
+    - name:           PhotonsCounter
+      subdir:         photons_counter
+      fcl:            fcl/phcounter_run.fcl
+      idir: /pnfs/dune/persistent/users/fbramati/protodune_data/
+      ifile: data_protodune
+      outputs:
+        - pippo_photon.root
+      local_source:   /dune/app/users/morgoth/better_ana_and_caf/larsoft.tar.gz
+      job_config:
+        expected-lifetime: 2h
+        timeout: 2h
+
+
+global:
+  nfiles: 2
+  nevents: 10
+  dune_version: v09_75_03d00
+  dune_qual: e20:debug
+  odir: /pnfs/dune/scratch/users/fbramati/protodune_analysis/
+  job_config:
+    group: dune
+    expected-lifetime: 6h
+    memory: 4000
+    timeout: 6h
+    OS: SL7
+
